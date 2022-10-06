@@ -9,7 +9,12 @@ const authSlice = createSlice({
     login(state) {
       state.isAuthenticated = true;
     },
+    logout(state) {
+      state.isAuthenticated = false;
+    },
   },
 });
+
+export const authActions = authSlice.actions;
 
 export const store = configureStore({ reducer: { auth: authSlice.reducer } });
