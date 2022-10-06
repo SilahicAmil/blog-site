@@ -7,7 +7,7 @@ const MainNavigation = () => {
 
   return (
     <header className={classes.header}>
-      <NavLink className={classes.logo} to="/">
+      <NavLink className={classes.logo} to="/posts">
         Blog Site
       </NavLink>
       <nav className={classes.nav}>

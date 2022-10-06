@@ -15,6 +15,10 @@ const authSlice = createSlice({
   },
 });
 
+// Add an edit user reducer (possibly)
+
 export const authActions = authSlice.actions;
 
-export const store = configureStore({ reducer: { auth: authSlice.reducer } });
+export const store = configureStore({
+  reducer: { auth: authSlice.reducer },
+});
