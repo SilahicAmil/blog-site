@@ -1,19 +1,37 @@
 import { NavLink } from "react-router-dom";
+import classes from "./MainNavigation.module.css";
 
 const MainNavigation = () => {
   return (
-    <header className="w-full h-20 flex pr-4 justify-center bg-blue-400">
-      <div className="text-4xl text-white">Blog Site</div>
-      <nav>
-        <ul className="list-none flex m-0 p-0">
-          <li className="ml-6 text-2xl">
-            <NavLink to="create-post">Create Post</NavLink>
+    <header className={classes.header}>
+      <NavLink className={classes.logo} to="/">
+        Blog Site
+      </NavLink>
+      <nav className={classes.nav}>
+        <ul>
+          <li>
+            <NavLink
+              className={(navData) => (navData.isActive ? classes.active : "")}
+              to="create-post"
+            >
+              Create Post
+            </NavLink>
           </li>
-          <li className="ml-6 text-2xl">
-            <NavLink to="user-profile/:userId">User Profile</NavLink>
+          <li>
+            <NavLink
+              className={(navData) => (navData.isActive ? classes.active : "")}
+              to="user-profile/:userId"
+            >
+              User Profile
+            </NavLink>
           </li>
-          <li className="ml-6 text-2xl">
-            <NavLink to="login">Login</NavLink>
+          <li>
+            <NavLink
+              className={(navData) => (navData.isActive ? classes.active : "")}
+              to="login"
+            >
+              Login
+            </NavLink>
           </li>
         </ul>
       </nav>
