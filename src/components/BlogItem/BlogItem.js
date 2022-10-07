@@ -1,5 +1,4 @@
 import Card from "../UI/Card";
-import { authActions } from "../Store";
 import avatarImg from "../../assets/avataaars.png";
 import classes from "./BlogItem.module.css";
 import { useSelector } from "react-redux";

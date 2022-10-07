@@ -15,7 +15,7 @@ function App() {
         <Route path="posts" element={<AllPosts />}></Route>
         {/* Add  path to /posts/:postId*/}
         {/* Add path to /posts/:postId/edit */}
-        {/* Add path to /posts/comments/:postId */}
+        {/* Add path to /posts/:postId/comments */}
         <Route path="create-post" element={<CreatePost />}></Route>
         <Route path="user-profile/:userId" element={<UserProfile />}></Route>
         {/* Add path to user-profile/:userId/edit */}
