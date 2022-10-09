@@ -9,6 +9,7 @@ const BlogItem = (props) => {
   const [likeCount, setLikeCount] = useState(0);
 
   const isAuth = useSelector((state) => state.auth.isAuthenticated);
+  // probably a less hacky way to do this idk
   const blogText = useSelector((state) => state.addBlog.blogsContent);
 
   const likeHandler = () => {
