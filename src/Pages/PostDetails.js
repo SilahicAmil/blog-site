@@ -1,7 +1,7 @@
-// Add this to app.js route
+import BlogItem from "../components/BlogItem/BlogItem";
 
 const PostDetails = () => {
-  return <h1>This is the post details screen</h1>;
+  return <BlogItem />;
 };
 
 export default PostDetails;

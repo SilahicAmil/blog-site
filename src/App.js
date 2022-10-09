@@ -5,6 +5,7 @@ import CreatePost from "./Pages/CreatePost";
 import Layout from "./components/Layout/Layout";
 import Login from "./Pages/Login";
 import Logout from "./Pages/Logout";
+import PostDetails from "./Pages/PostDetails";
 import UserProfile from "./Pages/UserProfile";
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<Navigate replace to="/posts" />}></Route>
         <Route path="posts" element={<AllPosts />}></Route>
         {/* Add route to posts/:postId */}
+        <Route path="/:postId" element={<PostDetails />}></Route>
         {/* Add route to posts/:postId/edit */}
         <Route path="create-post" element={<CreatePost />}></Route>
         <Route path="user-profile/:userId" element={<UserProfile />}></Route>

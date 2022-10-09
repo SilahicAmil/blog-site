@@ -38,7 +38,7 @@ const AllPosts = () => {
       <h1>All Posts</h1>
 
       {blogData.map((item) => {
-        return <BlogItem />;
+        return <BlogItem key={item.id} />;
       })}
     </>
   );

@@ -1,12 +1,15 @@
 import Card from "../UI/Card";
 import avatarImg from "../../assets/avataaars.png";
 import classes from "./BlogItem.module.css";
+import { useNavigate } from "react-router";
 import { useSelector } from "react-redux";
 import { useState } from "react";
 
 const BlogItem = (props) => {
   const [isLiked, setIsLiked] = useState(false);
   const [likeCount, setLikeCount] = useState(0);
+
+  const navigate = useNavigate();
 
   const isAuth = useSelector((state) => state.auth.isAuthenticated);
   // probably a less hacky way to do this idk
@@ -22,12 +25,16 @@ const BlogItem = (props) => {
     setLikeCount(likeCount - 1);
   };
 
+  const editPostHandler = () => {
+    navigate("/:postId");
+  };
+
   let likedStyle = !isLiked ? classes.buttons : classes.active;
 
   return (
     <>
       <div className={classes.item}>
-        {isAuth && <button>Edit Post</button>}
+        <button onClick={editPostHandler}>Edit Post</button>
         <div className={classes.header}>
           <img src={avatarImg} alt="" />
         </div>
