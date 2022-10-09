@@ -9,6 +9,7 @@ const BlogItem = (props) => {
   const [likeCount, setLikeCount] = useState(0);
 
   const isAuth = useSelector((state) => state.auth.isAuthenticated);
+  const blogText = useSelector((state) => state.addBlog.blogsContent);
 
   const likeHandler = () => {
     setIsLiked(true);
@@ -30,10 +31,10 @@ const BlogItem = (props) => {
           <img src={avatarImg} alt="" />
         </div>
         <div className={classes.name}>
-          <h2>{props.name}</h2>
+          <h2>John Stossel</h2>
         </div>
         <div className={classes.contents}>
-          <p>{props.content}</p>
+          <p>{blogText}</p>
         </div>
         <Card className={classes.buttons}>
           {!isLiked && isAuth && (

@@ -1,5 +1,11 @@
+import BlogPostForm from "../components/BlogPostForm.js/BlogPostForm";
+
 const CreatePost = () => {
-  return <h1>Create Post Page</h1>;
+  return (
+    <div>
+      <BlogPostForm />
+    </div>
+  );
 };
 
 export default CreatePost;
