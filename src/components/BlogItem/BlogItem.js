@@ -29,6 +29,10 @@ const BlogItem = (props) => {
     navigate("/:postId");
   };
 
+  const commentPostHandler = () => {
+    navigate("/:postId/comments");
+  };
+
   let likedStyle = !isLiked ? classes.buttons : classes.active;
 
   return (
@@ -60,7 +64,7 @@ const BlogItem = (props) => {
             </span>
           )}
 
-          {isAuth && <span>Comment</span>}
+          <span onClick={commentPostHandler}>Comment</span>
         </Card>
         <p>{likeCount} - Likes</p>
       </div>
