@@ -38,7 +38,7 @@ const BlogItem = (props) => {
   return (
     <>
       <div className={classes.item}>
-        <button onClick={editPostHandler}>Edit Post</button>
+        {isAuth && <button onClick={editPostHandler}>Edit Post</button>}
         <div className={classes.header}>
           <img src={avatarImg} alt="" />
         </div>
@@ -64,7 +64,7 @@ const BlogItem = (props) => {
             </span>
           )}
 
-          <span onClick={commentPostHandler}>Comment</span>
+          {isAuth && <span onClick={commentPostHandler}>Comment</span>}
         </Card>
         <p>{likeCount} - Likes</p>
       </div>

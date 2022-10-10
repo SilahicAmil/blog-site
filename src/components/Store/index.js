@@ -17,7 +17,7 @@ const authSlice = createSlice({
 
 const blogPostTextSlice = createSlice({
   name: "text",
-  initialState: { blogsContent: ["test post"] },
+  initialState: { blogsContent: [] },
   reducers: {
     addBlog(state, action) {
       const newBlogText = action.payload;
